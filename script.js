@@ -11,7 +11,7 @@ const bici = [
     { nome: "Scott", peso: 38}
 ];
 
-let pesoPiuBasso;
+let pesoPiuBasso = 0;
 
 
 for (let i = 0; i < bici.length; i++) {
@@ -21,6 +21,10 @@ for (let i = 0; i < bici.length; i++) {
     console.log(pesiBici);
     
 }
+
+pesoPiuBasso = Math.min(...pesiBici);
+console.log(pesoPiuBasso);
+
 
 
 
@@ -48,11 +52,6 @@ function puntiFattiCasuale(min, max) {
 function inserimentoGol(punteggi, min, max) {
   // Itera sulle chiavi dell'oggetto
   for (const key in punteggi) {
-    // Controlla che la proprietà appartenga all'oggetto stesso
-    if (Object.hasOwnProperty.call(obj, key)) {
-      // Genera un nuovo valore casuale per la proprietà
-      obj[key] = generaNumeroCasuale(min, max);
-    }
+
   }
-  return obj;
 }

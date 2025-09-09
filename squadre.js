@@ -24,8 +24,19 @@ for (let i = 0; i < squadre.length; i++) {
   squadre[i].falliSubiti = generaGolCasuale(0, 500);
 }
 
-//console.log(squadre);
+console.log(squadre);
 
+
+const nomiFalli = [];
+
+for (let i = 0; i < squadre.length; i++) {
+  nomiFalli.push({
+    nome: squadre[i].nome,
+    falliSubiti: squadre[i].falliSubiti
+  });
+}
+
+console.log(nomiFalli);
 
 
 

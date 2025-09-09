@@ -11,20 +11,21 @@ const bici = [
     { nome: "Scott", peso: 38}
 ];
 
-let pesoPiuBasso = 0;
+let pesoPiuBasso = bici[0];
 
 
 for (let i = 0; i < bici.length; i++) {
     const biciComplete = bici[i];
     //console.log(pesoBici.peso);
-    pesiBici = biciComplete.peso
-    console.log(pesiBici);
+    pesoBici = biciComplete.peso
+
+        if (biciComplete.peso < pesoPiuBasso.peso) {
+            pesoPiuBasso = bici[i];
+        }
     
 }
 
-pesoPiuBasso = Math.min(...pesiBici);
-console.log(pesoPiuBasso);
-
+console.log("La bici col peso più basso è", pesoPiuBasso);
 
 
 
@@ -38,20 +39,21 @@ console.log(pesoPiuBasso);
 
 // squadre
 const squadre = [
-    { nome: "Liverpool", puntiFatti: 0, falliSubiti: 0},
-    { nome: "Barcellona", puntiFatti: 0, falliSubiti: 0},
-    { nome: "Liverpool", puntiFatti: 0, falliSubiti: 0},
-    { nome: "Real Madrid", puntiFatti: 0, falliSubiti: 0}
+    { nome: "Casa Stark", puntiFatti: 0, falliSubiti: 0},
+    { nome: "Casa Lannister", puntiFatti: 0, falliSubiti: 0},
+    { nome: "Casa Targaryen", puntiFatti: 0, falliSubiti: 0},
+    { nome: "Casa Baratheon", puntiFatti: 0, falliSubiti: 0}
 ];
 
+
 // creazione numeri casuali
-function puntiFattiCasuale(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-};
-
-function inserimentoGol(punteggi, min, max) {
-  // Itera sulle chiavi dell'oggetto
-  for (const key in punteggi) {
-
-  }
+function generaGolCasuale(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+for (let i = 0; i < squadre.length; i++) {
+  squadre[i].puntiFatti = generaGolCasuale(1, 10);
+  squadre[i].falliSubiti = generaGolCasuale(1, 10);
+}
+
+console.log(squadre);

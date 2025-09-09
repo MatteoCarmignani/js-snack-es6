@@ -20,8 +20,12 @@ function generaGolCasuale(min, max) {
 }
 
 for (let i = 0; i < squadre.length; i++) {
-  squadre[i].puntiFatti = generaGolCasuale(1, 10);
-  squadre[i].falliSubiti = generaGolCasuale(1, 10);
+  squadre[i].puntiFatti = generaGolCasuale(0, 500);
+  squadre[i].falliSubiti = generaGolCasuale(0, 500);
 }
 
-console.log(squadre);
+//console.log(squadre);
+
+
+
+
